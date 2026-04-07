@@ -1,25 +1,32 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-
+import './App.jsx';
 import Layout from './components/Layout';
+import AboutPage from './pages/AboutPage';
+import ArticleListPage from './pages/ArticleListPage';
 import ArticlePage from './pages/ArticlePage';
-import Homepage from './pages/HomePage';
-import Aboutpage from './pages/AboutPage'
+import HomePage from './pages/HomePage';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import NotFoundPage from './pages/NotFoundPage';
 
 const routes = [
   {
     path: '/',
     element: <Layout />,
+    errorElement: <NotFoundPage />, 
     children: [
       {
-        path: '',
-        element: <Homepage />,
+        path: '/',
+        element: <HomePage />,
       },
       {
-        path: 'about',
-        element: <Aboutpage />,
+        path: '/about',
+        element: <AboutPage />,
       },
       {
-        path: 'articles',
+        path: '/articles',
+        element: <ArticleListPage />,
+      },
+      {
+        path: '/articles/:name', // Removed the space after the colon
         element: <ArticlePage />,
       },
     ],
@@ -30,13 +37,10 @@ const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <>
-      <RouterProvider router = {router} />
-    </>
+  <>
+    <RouterProvider router={router} />;
+  </>
   );
 }
- 
- 
+
 export default App;
- 
- 
