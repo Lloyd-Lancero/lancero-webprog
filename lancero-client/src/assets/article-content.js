@@ -7,6 +7,7 @@ const articles = [
       "Example:\nfunction Welcome(props) {\n return <h1>Hello, {props.name}!</h1>;\n}",
       "React supports multiple styling approaches: inline styles, CSS files, CSS Modules, and styled-components.",
       "Inline Style Example: \nconst style = { color: 'blue' }; \n<p style={style}>Styled Text</p>",
+      "img:'/assets/imgs/logo.jpg",
     ],
   },
   {
