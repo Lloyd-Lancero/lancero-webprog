@@ -70,7 +70,7 @@ const SignInPage = () => {
           type="submit"
           variant="primary"
           className={`${actionButtonClassName} hover:shadow-lg hover:-translate-y-0.5`}
-          to="/"
+          to="/dashboard"
         >
           Log In
         </Button>
