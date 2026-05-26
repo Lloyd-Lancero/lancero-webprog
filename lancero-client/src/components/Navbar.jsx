@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from '../assets/imgs/logo.png';
+import logo from '../assets/imgs/cd.png';
 import Button from './Button';
 
 
@@ -15,13 +15,13 @@ const navLinkClassName = ({ isActive }) =>
     'transition-all duration-200 ease-out',
 
     isActive
-      ? 'text-zinc-50 bg-[#cf3636] shadow-md after:w-6'
-      : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-200 hover:shadow-sm hover:-translate-y-0.5 hover:after:w-6',
+      ? 'text-zinc-100 bg-[#cf3636] shadow-md after:w-6'
+      : 'text-zinc-100/90 hover:text-zinc-900 hover:bg-zinc-200 hover:shadow-sm hover:-translate-y-0.5 hover:after:w-6',
   ].join(' ');
 
 const NavBar = () => {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-zinc-100/80 backdrop-blur-md border-b border-zinc-200 shadow-sm">
+    <header className="fixed inset-x-0 top-0 z-50 bg-[#000080] backdrop-blur-md border-b border-zinc-200 shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
 
         <NavLink to="/" className="flex items-center gap-3 group">
@@ -43,7 +43,7 @@ const NavBar = () => {
           ))}
         </nav>
         <Button to="/auth/signin" variant="primary">
-        Log Out
+        Log In
         </Button>
       </div>
     </header>

@@ -11,15 +11,15 @@ const HomePage = () => {
           
           <div> 
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
-              Hero Section
+              Welcome to Echo Music
             </p>
 
             <h1 className="max-w-xl text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl">
-              Welcome to Wireframe Studio Layout
+              "Your Ultimate Destination for Honest Music Reviews"
             </h1>
 
             <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-600 sm:text-base">
-              Discover the art of wireframing with a simple layout system for hero content, key numbers, and feature cards.
+              Discover legendary artists, timeless albums, and unforgettable tracks. Explore our curated collection of music history and find your next favorite song.
             </p>
 
             <div className="mt-6">
@@ -40,41 +40,41 @@ const HomePage = () => {
       <section className="bg-zinc-50 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 border-b border-zinc-200">
         <div className="mb-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
-            KPI Section
+            Key Metrics
           </p>
 
           <h2 className="mt-2 text-2xl font-semibold text-zinc-900">
-            Quick overview blocks
+            Overall Summary Reviews
           </h2>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
           <div className="rounded-3xl bg-white p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-            <p className="text-2xl font-bold text-zinc-900">12</p>
+            <p className="text-2xl font-bold text-zinc-900">25+</p>
             <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Projects
+              Music Genres
             </p>
           </div>
 
           <div className="rounded-3xl bg-white p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-            <p className="text-2xl font-bold text-zinc-900">08</p>
+            <p className="text-2xl font-bold text-zinc-900">50+</p>
             <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Sections
+              Different Artists
             </p>
           </div>
 
           <div className="rounded-3xl bg-white p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-            <p className="text-2xl font-bold text-zinc-900">24</p>
+            <p className="text-2xl font-bold text-zinc-900">200+</p>
             <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Screens
+              Songs Reviewed
             </p>
           </div>
 
           <div className="rounded-3xl bg-white p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-            <p className="text-2xl font-bold text-zinc-900">04</p>
+            <p className="text-2xl font-bold text-zinc-900">100+</p>
             <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Layouts
+              Albums Reviewed
             </p>
           </div>
 
@@ -89,7 +89,7 @@ const HomePage = () => {
           </p>
 
           <h2 className="mt-2 text-2xl font-semibold text-zinc-900">
-            Simple wireframe cards
+            Why Choose Echo Music?
           </h2>
         </div>
 
@@ -97,25 +97,25 @@ const HomePage = () => {
 
           <div className="rounded-3xl bg-white p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="mb-4 h-12 w-12 rounded-2xl bg-zinc-200 transition" />
-            <h3 className="text-xl font-bold text-zinc-900">Clean Layout</h3>
+            <h3 className="text-xl font-bold text-zinc-900">Top tier Critics</h3>
             <p className="mt-3 text-sm leading-6 text-zinc-600">
-              A minimalist approach to building interfaces with clear visual hierarchy.
+              Our team of expert critics provides in-depth analysis and honest opinions on a wide range of music.
             </p>
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="mb-4 h-12 w-12 rounded-2xl bg-zinc-200 transition" />
-            <h3 className="text-xl font-bold text-zinc-900">Responsive</h3>
+            <h3 className="text-xl font-bold text-zinc-900">Reliable Reviews</h3>
             <p className="mt-3 text-sm leading-6 text-zinc-600">
-              Designed to work seamlessly across mobile, tablet, and desktop screens.
+              We provide honest and unbiased reviews to help you discover new music and make informed listening choices.
             </p>
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="mb-4 h-12 w-12 rounded-2xl bg-zinc-200 transition" />
-            <h3 className="text-xl font-bold text-zinc-900">Modular</h3>
+            <h3 className="text-xl font-bold text-zinc-900">Wide Selection</h3>
             <p className="mt-3 text-sm leading-6 text-zinc-600">
-              Easily extendable component-based structure for rapid prototyping.
+              We cover a wide range of music genres, from classic rock to hip-hop, ensuring there's something for every music lover.
             </p>
           </div>
 

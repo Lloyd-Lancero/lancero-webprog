@@ -14,12 +14,11 @@ const ArticleListPage = () => {
         </p>
 
         <h1 className="max-w-xl text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl">
-          Featured articles in a simple card grid
+          Explore Our Latest Music Reviews and Artist Spotlights
         </h1>
 
         <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-600 sm:text-base">
-          A clean wireframe section for article thumbnails, titles, short
-          descriptions, and one clear action per card.
+          Dive into our in-depth reviews of the latest albums, singles, and live performances across all genres. Discover new artists and gain insights into the music industry with our expert analysis.
         </p>
 
         <div className="mt-6">
@@ -39,7 +38,7 @@ const ArticleListPage = () => {
           </p>
 
           <h2 className="mt-2 text-2xl font-semibold text-zinc-900">
-            Article card grid
+            Current Higlights
           </h2>
         </div>
 
