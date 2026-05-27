@@ -24,7 +24,10 @@ import PeopleIcon from "@mui/icons-material/People";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import Button from "@mui/material/Button";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
-import ArticleIcon from "@mui/icons-material/Article";
+
+// Consistent Streaming Theme Palette
+const STREAM_RED = '#cf3636'; 
+const STREAM_NAVY = '#000080';
 
 const drawerWidth = 240;
 const dashboardNavItems = [
@@ -81,6 +84,8 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({ 
   zIndex: theme.zIndex.drawer + 1,
+  backgroundColor: STREAM_NAVY, // Styled background header panel
+  boxShadow: '0 2px 4px rgba(0,0,0,0.08)',
   transition: theme.transitions.create(["width", "margin"], { 
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -125,9 +130,9 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.white, 0.12),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 0.22),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -159,7 +164,7 @@ const DashLayout = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const pageTitle = getPageTitle(location.pathname);
-  const navigate = useNavigate(); // Fixed: changed '-' to '='
+  const navigate = useNavigate();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -175,90 +180,108 @@ const DashLayout = () => {
   
   return (
     <>
-        <Box sx={{ display: "flex" }}>
-            <CssBaseline />
-            {/* AppBar */}
-            {/* <AppBar position="fixed" open={open}> */}
-            <AppBar position="fixed">
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={open ? handleDrawerClose : handleDrawerOpen}
-                        edge="start"
-                        sx={{
-                            marginRight: 5, ...open}}
-                            >
-                                {open ? <MenuOpenIcon /> : <MenuIcon />}
-                                </IconButton> 
-                                <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-                                    {pageTitle}
-                                </Typography>
-                                {/* <Search> */}
-                                <Search>
-                                    <SearchIconWrapper>
-                                        <SearchIcon />
-                                    </SearchIconWrapper>
-                                    <StyledInputBase
-                                        placeholder="Search…"
-                                        inputProps={{ "aria-label": "search" }}
-                                        />
-                                </Search>
-                                <Button color="inherit" variant="outlined" onClick={handleLogout}>  Logout</Button>
-                </Toolbar>
-
-            </AppBar>
-            {/* Drawer */}
-            <Drawer variant="permanent" open={open}>
-                <DrawerHeader>
-                    <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === "rtl" ? (
-                            <ChevronRightIcon /> 
-                        ) : (
-                        <ChevronLeftIcon />
-                        )}
-                    </IconButton>
-                </DrawerHeader>
-                <Divider />
-                {/* Drawer List */}
-                <List>
-                    {dashboardNavItems.map(({ label, to, icon: Icon }) => (
-                        <ListItem key={to} disablePadding sx={{ display: "block" }}>
-                            <ListItemButton
-                                component={Link}
-                                to={to}
-                                selected={location.pathname === to}
-                                sx={{
-                                    minHeight: 48,
-                                    px: 2.5,
-                                    justifyContent: open ? "initial" : "center",
-                                }}
-                            >
-                                <ListItemIcon
-                                    sx={{
-                                        minWidth: 0,
-                                        mr: open ? 3 : "auto",
-                                        justifyContent: "center",
-                                    }}
-                                    >
-                                    <Icon />
-                                    </ListItemIcon>
-                                    <ListItemText primary={label} 
-                                    sx={{ opacity: open ? 1 : 0 }}
-                                    />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
-                {/* Content */}
-                <Outlet />
-                </Box>
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <AppBar position="fixed">
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={open ? handleDrawerClose : handleDrawerOpen}
+              edge="start"
+              sx={{ marginRight: 5 }}
+            >
+              {open ? <MenuOpenIcon /> : <MenuIcon />}
+            </IconButton> 
+            <Typography variant="h6" noWrap component="div" fontWeight="800" sx={{ flexGrow: 1, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+              {pageTitle}
+            </Typography>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
+            <Button 
+              color="inherit" 
+              variant="outlined" 
+              onClick={handleLogout}
+              sx={{ borderColor: alpha('#ffffff', 0.6), '&:hover': { borderColor: '#ffffff', bgcolor: alpha('#ffffff', 0.08) } }}
+            >
+              Logout
+            </Button>
+          </Toolbar>
+        </AppBar>
+        
+        <Drawer variant="permanent" open={open}>
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "rtl" ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
+          <List sx={{ pt: 1 }}>
+            {dashboardNavItems.map(({ label, to, icon: Icon }) => {
+              const isSelected = location.pathname === to;
+              return (
+                <ListItem key={to} disablePadding sx={{ display: "block", mb: 0.5 }}>
+                  <ListItemButton
+                    component={Link}
+                    to={to}
+                    selected={isSelected}
+                    sx={{
+                      minHeight: 48,
+                      px: 2.5,
+                      justifyContent: open ? "initial" : "center",
+                      mx: open ? 1 : 0,
+                      borderRadius: open ? '4px' : '0px',
+                      // Red theme highlights for custom selected options
+                      '&.Mui-selected': {
+                        bgcolor: alpha(STREAM_RED, 0.1),
+                        color: STREAM_RED,
+                        '&:hover': {
+                          bgcolor: alpha(STREAM_RED, 0.15),
+                        },
+                        '& .MuiListItemIcon-root': {
+                          color: STREAM_RED,
+                        },
+                      },
+                      '&:hover': {
+                        bgcolor: alpha(STREAM_NAVY, 0.04),
+                      }
+                    }}
+                  >
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center",
+                        color: isSelected ? STREAM_RED : '#64748b'
+                      }}
+                    >
+                      <Icon />
+                    </ListItemIcon>
+                    <ListItemText 
+                      primary={label} 
+                      primaryTypographyProps={{ fontWeight: isSelected ? '700' : '500', fontSize: '0.95rem' }}
+                      sx={{ opacity: open ? 1 : 0 }}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
+          </List>
+        </Drawer>
+        <Box component="main" sx={{ flexGrow: 1, p: 4, bgcolor: '#f8fafc', minHeight: '100vh' }}>
+          <DrawerHeader />
+          <Outlet />
         </Box>
+      </Box>
     </>
-    );
+  );
 };
 
 export default DashLayout;
