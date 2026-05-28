@@ -1,10 +1,9 @@
 import Button from '../../components/Button';
 
-import header2 from '../../assets/imgs/header2.png';
-import wireframe1 from '../../assets/imgs/wireframe1.webp';
-import wireframe2 from '../../assets/imgs/wireframe2.webp';
-import wireframe3 from '../../assets/imgs/wireframe3.png';
-import wireframe4 from '../../assets/imgs/wireframe4.png';
+import sc from '../../assets/imgs/sc.png';
+import tiktok from '../../assets/imgs/tiktok.png';
+import ai from '../../assets/imgs/ai.png';
+import vynil from '../../assets/imgs/vynil.png';
 
 const AboutPage = () => {
   return (
@@ -19,11 +18,11 @@ const AboutPage = () => {
             </p>
 
             <h1 className="max-w-xl text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl">
-              Echo Music Your Ultimate Destination for Honest Music Critiques
+              Uncover the Stories Behind the Music
             </h1>
 
             <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-600 sm:text-base">
-              Your go-to source for honest and in-depth music analysis. We cover a wide range of genres and artists, helping you discover new music and make informed listening choices.
+              At our core, we are passionate music enthusiasts dedicated to sharing our love for music with the world. With over a decade of experience in the industry, we have built a reputation for delivering insightful analysis, engaging artist spotlights, and comprehensive coverage of the music scene. Our team of expert writers and critics are committed to providing high-quality content that resonates with music lovers of all backgrounds.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -118,18 +117,26 @@ const AboutPage = () => {
           </div>
 
           <div className="rounded-3xl bg-white p-5 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-zinc-900 tracking-tight">
+                Recent Updates
+                </h2>
+                <p className="text-sm text-zinc-500 mt-1">
+                  Check out our latest layout mockups and changes.
+                  </p>
+                  </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="aspect-square rounded-2xl bg-zinc-100 overflow-hidden hover:scale-105 transition duration-300">
-                <img src={wireframe1} className="object-cover w-full h-full" />
+                <img src={sc} className="object-cover w-full h-full" />
               </div>
               <div className="aspect-square rounded-2xl bg-zinc-100 overflow-hidden hover:scale-105 transition duration-300">
-                <img src={wireframe2} className="object-cover w-full h-full" />
+                <img src={tiktok} className="object-cover w-full h-full" />
               </div>
               <div className="aspect-square rounded-2xl bg-zinc-100 overflow-hidden hover:scale-105 transition duration-300">
-                <img src={wireframe3} className="object-cover w-full h-full" />
+                <img src={ai} className="object-cover w-full h-full" />
               </div>
               <div className="aspect-square rounded-2xl bg-zinc-100 overflow-hidden hover:scale-105 transition duration-300">
-                <img src={wireframe4} className="object-cover w-full h-full" />
+                <img src={vynil} className="object-cover w-full h-full" />
               </div>
 
             </div>

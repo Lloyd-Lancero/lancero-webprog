@@ -14,11 +14,11 @@ const ArticleListPage = () => {
         </p>
 
         <h1 className="max-w-xl text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl">
-          Explore Our Latest Music Reviews and Artist Spotlights
+          Explore the Latest in Music: Reviews, Interviews, and Industry Insights
         </h1>
 
         <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-600 sm:text-base">
-          Dive into our in-depth reviews of the latest albums, singles, and live performances across all genres. Discover new artists and gain insights into the music industry with our expert analysis.
+          Dive into our curated collection of music articles, featuring in-depth reviews, artist interviews, and industry insights. Whether you're a casual listener or a die-hard fan, our content is designed to keep you informed and inspired in the ever-evolving world of music.
         </p>
 
         <div className="mt-6">
@@ -38,7 +38,7 @@ const ArticleListPage = () => {
           </p>
 
           <h2 className="mt-2 text-2xl font-semibold text-zinc-900">
-            Current Higlights
+            Current Highlights
           </h2>
         </div>
 

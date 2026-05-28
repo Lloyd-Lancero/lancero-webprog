@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+          import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const ArticleList = ({ articles }) => {
@@ -13,7 +13,7 @@ const ArticleList = ({ articles }) => {
 
           <div className="aspect-4/3 flex items-center justify-center rounded-2xl bg-zinc-100 overflow-hidden hover:scale-105 transition duration-300">
           <img 
-          src={article.imgs}
+          src={article.img}
           alt={article.title}
           className="object-contain"
           />

@@ -1,53 +1,39 @@
+import sc from '../assets/imgs/sc.png';
+import tiktok from '../assets/imgs/tiktok.png';
+import ai from '../assets/imgs/ai.png';
+import vynil from '../assets/imgs/vynil.png';
+
 const articles = [
   {
-    name: "react-props-and-styling",
-    title: "Understanding React Props and Styling",
+    name: "Mainstream Pop",
+    title: "The Main Character Era: How Chappell Roan and Sabrina Carpenter Reclaimed Pure Pop",
+    img: sc,
     content: [
-      "Props (short for properties) allow you to pass data between components. They are read-only and essential for component reusability.",
-      "Example:\nfunction Welcome(props) {\n return <h1>Hello, {props.name}!</h1>;\n}",
-      "React supports multiple styling approaches: inline styles, CSS files, CSS Modules, and styled-components.",
-      "Inline Style Example: \nconst style = { color: 'blue' }; \n<p style={style}>Styled Text</p>",
-      "img:'/assets/imgs/logo.jpg",
+      "The landscape of mainstream pop is undergoing a massive cultural shift. Driven by theatrical storytelling, unapologetic femininity, and soaring hooks, new icons are moving away from the era of muted, moody pop and bringing camp, humor, and explosive energy back to the center stage.",
     ],
   },
   {
-    name: "react-functional-components",
-    title: "React Functional Components",
+    name: "Technology & Songwriting",
+    title: "The Algorithm Beat: How TikTok is Rewriting the Rules of Songwriting",
+    img: tiktok,
     content: [
-      "Functional components are simple JavaScript functions that return JSX.",
-      "They are stateless by default but can use hooks like useState and useEffect.",
-      "Example:\nfunction HelloWorld() {\n return <h1>Hello, World!</h1>;\n}",
-      "They are preferred in modern React apps for simplicity and performance.",
+      "From viral dance challenges to 15-second soundbites, social media platforms are no longer just marketing tools—they are actively altering structural music production. Producers are now prioritizing immediate, high-dopamine hooks over traditional verse-chorus formats to capture shortening attention spans.",
     ],
   },
   {
-    name: "react-component-lifecycle",
-    title: "React Component Lifecycle",
+    name: "Futurology",
+    title: "The Rise of Cyberpunk Pop: How AI and Virtual Idols Are Topping the Charts",
+    img: ai,
     content: [
-      "Class components have lifecycle methods: mounting, updating, unmounting.",
-      "Key methods include: componentDidMount, componentDidUpdate, componentWillUnmount.",
-      "Functional components use the useEffect hook to mimic lifecycle behavior.",
-      "Example:\nuseEffect(()=> {\n console.log('Mounted' ); \n return () => console.log('Unmounted' ); \n}, []);",
+      "From hyper-realistic virtual avatars to completely synthesized vocalists, the boundary between human artists and digital entities is blurring. Driven by a blend of futuristic visuals, futuristic hyperpop production, and algorithmic fan interaction, virtual idol groups are securing major record deals and reshaping what it means to be a modern pop star.",
     ],
   },
   {
-    name: "react-routing-basics",
-    title: "React Router Basics",
+    name: "Physical Media & Consumer Behavior",
+    title: "Vinyl’s Revenge: Why Gen Z is Buying Records They Can’t Even Play",
+    img: vynil,
     content: [
-      "React Router allows navigation between pages without a page reload.",
-      "Set up routes using BrowserRouter, Routes, and Route components.",
-      "Example:\n<Routes>\n <Route path=\"/\" element={<Home />} />\n <Route path=\"/about\" element={<About />} />\n</Routes>",
-      "Use Link component for navigation:\n<Link to=\"/about\">About</Link>",
-    ],
-  },
-  {
-    name: "react-state-management",
-    title: "Managing State in React",
-    content: [
-      "State allows components to keep track of dynamic data.",
-      "useState hook lets functional components manage state.",
-      "Example:\nconst [count, setCount] = useState(0);",
-      "Updating state triggers a re-render with the new value.",
+      "In an entirely digitized music market dominated by streaming algorithms, physical media is making an unexpected, massive comeback. Young music fans are driving a historic surge in vinyl sales, transforming physical record albums into premium merchandise, collector's items, and interior design statements.",
     ],
   },
 ];

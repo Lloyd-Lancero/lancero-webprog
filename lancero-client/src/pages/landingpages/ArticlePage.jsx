@@ -53,7 +53,7 @@ function ArticlePage() {
           </h1>
 
           <p className="mt-2 text-sm text-zinc-500">
-            {article.name
+            {article.category || article.name
               .split('-')
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ')}
@@ -72,7 +72,7 @@ function ArticlePage() {
           <div className="mb-8 rounded-3xl bg-zinc-100 overflow-hidden shadow-md hover:shadow-xl transition duration-300 aspect-4/3">
             <div className="w-full h-full flex items-center justify-center bg-zinc-100">
               <img 
-             src={article.imgs}
+             src={article.img}
              alt={article.title}
              className="object-contain"
              />
