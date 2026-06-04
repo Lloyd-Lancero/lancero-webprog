@@ -5,7 +5,6 @@ const HomePage = () => {
   return (
     <div className="flex w-full flex-col gap-6">
 
-      {/* HERO SECTION WITH BACKGROUND IMAGE */}
       <section className="relative bg-zinc-900 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 border-b border-zinc-800 overflow-hidden min-h-[450px] flex items-center">
         
         {/* 1. Background Image Layer */}
@@ -15,11 +14,11 @@ const HomePage = () => {
             alt="Music collage background" 
             className="w-full h-full object-cover scale-105"
           />
-          {/* 2. Dark Overlay to ensure text readability */}
+
           <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-900/80 to-transparent" />
         </div>
 
-        {/* 3. Foreground Content Layer */}
+
         <div className="relative z-10 mx-auto max-w-7xl w-full">
           <div className="max-w-xl"> 
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-amber-400">
