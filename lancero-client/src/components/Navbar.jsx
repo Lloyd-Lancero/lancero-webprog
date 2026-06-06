@@ -19,7 +19,7 @@ const navLinkClassName = ({ isActive }) =>
       : 'text-zinc-100/90 hover:text-zinc-900 hover:bg-zinc-200 hover:shadow-sm hover:-translate-y-0.5 hover:after:w-6',
   ].join(' ');
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-[#000080] backdrop-blur-md border-b border-zinc-200 shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
