@@ -3,7 +3,7 @@ import Layout from './layouts/Layout';
 import ArticlePage from './pages/landingpages/ArticlePage';
 import HomePage from './pages/landingpages/HomePage';
 import AboutPage from './pages/landingpages/AboutPage';
-import ArticleListPage from './pages/landingPages/ArticleListPage';
+import ArticleListPage from './pages/landingpages/ArticleListPage';
 import AuthLayout from './layouts/AuthLayout';
 import SignInPage from './pages/authpages/SignInPage';
 import SignUpPage from './pages/authpages/SignUpPage';
