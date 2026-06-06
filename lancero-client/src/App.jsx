@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './layouts/Layout';
-import ArticlePage from './pages/landingPages/ArticlePage';
-import HomePage from './pages/landingPages/HomePage';
-import AboutPage from './pages/landingPages/AboutPage';
+import ArticlePage from './pages/landingpages/ArticlePage';
+import HomePage from './pages/landingpages/HomePage';
+import AboutPage from './pages/landingpages/AboutPage';
 import ArticleListPage from './pages/landingPages/ArticleListPage';
 import AuthLayout from './layouts/AuthLayout';
-import SignInPage from './pages/AuthPages/SignInPage';
-import SignUpPage from './pages/AuthPages/SignUpPage';
+import SignInPage from './pages/authpages/SignInPage';
+import SignUpPage from './pages/authpages/SignUpPage';
 import NotFoundPage from './pages/NotFoundPage';
 import DashLayout from './layouts/DashLayout';
 import DashboardPage from './pages/dashboardpages/DashboardPage';
