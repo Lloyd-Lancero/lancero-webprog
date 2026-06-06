@@ -5,7 +5,7 @@ import HomePage from './pages/landingpages/HomePage';
 import AboutPage from './pages/landingpages/AboutPage';
 import ArticleListPage from './pages/landingpages/ArticleListPage';
 import AuthLayout from './layouts/AuthLayout';
-import SignInPage from './pages/authpages/SignInPage';
+import SignInPage from './pages/authpages/SIgnInPage';
 import SignUpPage from './pages/authpages/SignUpPage';
 import NotFoundPage from './pages/NotFoundPage';
 import DashLayout from './layouts/DashLayout';
